@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(images/pattern-background-desktop.svg) no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  background-size: 100% 45%;
+  background-attachment: fixed;
+  font-family: 'red hat display', sans-serif;
+}
+
+.parent {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 0 10px 18px hsl(224, 19%, 78%);
+}
+
+.image {
+  background-image: url(images/illustration-hero.svg);
+  background-size: cover;
+  height: 170px;
+  border-radius: 15px 15px 0 0;
+}
+
+.content {
+  text-align: center;
+  color: hsl(223, 47%, 23%);
+  padding: 35px;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 21.5px;
+}
+
+.disc {
+  font-size: 13px;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.6;
+  margin: 10px;
+}
+
+.plan {
+  background-color:hsl(225, 100%, 98%);
+  padding: 15px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.icon {
+  transform: scale(0.8);
+}
+
+.add {
+  margin-left: 10px;
+  line-height: 1.7;
+  height: fit-content
+}
+
+.plan .add :first-child {
+  font-weight: 900;
+}
+
+.plan .add :last-child {
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.first {
+  display: flex;
+  align-items: center;
+}
+
+.plan :last-child a {
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+  font-size: 12px;
+}
+
+.plan :last-child a:active {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.content .pay {
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 25px 0;
+  cursor: pointer;
+  box-shadow: 0 12px 20px #ccc;
+  user-select: none;
+  ;
+}
+
+.content .pay:active {
+  opacity: 0.6;
+}
+
+.cancel {
+  font-size: 12px;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.cancel:active {
+  color: hsl(223, 47%, 23%);
+}
+
+/*For mobile devices*/
+@media (max-width: 375px) {
+  .parent {
+    width: 320px;
+  }
+
+  .content {
+    padding: 25px;
+  }
+
+  .content .pay {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .content .cancel {
+    font-size: 13px;
+  }
+}
